@@ -10,7 +10,6 @@
           type="number"
           class="form-control"
           placeholder="Weight"
-          @input="calculate"
         />
       </div>
       <div class="form-group col-sm">
@@ -21,7 +20,6 @@
           type="number"
           class="form-control"
           placeholder="Max reps"
-          @input="calculate"
         />
       </div>
     </form>
@@ -30,12 +28,11 @@
       Save default settings
     </button>
 
-    <ResultsRM />
+    <ResultsRM :rm1="rm1" />
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 import ResultsRM from '~/components/ResultsRM.vue'
 
 export default {
@@ -45,30 +42,26 @@ export default {
   },
   data() {
     return {
-      weight: 80,
-      reps: 0
+      weight: 50,
+      reps: 5
+    }
+  },
+  computed: {
+    rm1() {
+      return +this.weight / (1.0278 - 0.0278 * +this.reps)
     }
   },
   created() {
     if (process.client) {
       const defaultState = JSON.parse(localStorage.getItem('defaultState')) || {
-        weight: 80,
-        reps: 10
+        weight: this.weight,
+        reps: this.reps
       }
       this.weight = defaultState.weight
       this.reps = defaultState.reps
-      this.calculate()
     }
   },
   methods: {
-    ...mapActions(['updateValue']),
-    calculate() {
-      const params = {
-        weight: this.weight,
-        reps: +this.reps
-      }
-      this.updateValue({ params })
-    },
     saveSettings() {
       if (process.client) {
         const settings = JSON.stringify({

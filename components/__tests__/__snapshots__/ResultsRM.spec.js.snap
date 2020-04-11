@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsRM renders properly 1`] = `
+"<div class=\\"result\\">
+  <h4>
+    1RM: 90 Kg
+  </h4>
+  <h4>
+    2RM: 86 Kg
+  </h4>
+  <h4>
+    3RM: 84 Kg
+  </h4>
+  <h4>
+    4RM: 81 Kg
+  </h4>
+  <h4>
+    5RM: 78 Kg
+  </h4>
+  <h4>
+    6RM: 77 Kg
+  </h4>
+  <h4>
+    7RM: 75 Kg
+  </h4>
+  <h4>
+    8RM: 72 Kg
+  </h4>
+  <h4>
+    9RM: 69 Kg
+  </h4>
+  <h4>
+    10RM: 68 Kg
+  </h4>
+</div>"
+`;
