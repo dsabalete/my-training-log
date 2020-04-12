@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -31,6 +31,18 @@ body {
   width: 500px;
   padding: 0 20px 20px;
   margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  #app {
+    width: 550px;
+    background-color: pink;
+  }
+}
+@media screen and (min-width: 992px) {
+  #app {
+    width: 900px;
+    background-color: limegreen;
+  }
 }
 hr {
   box-sizing: content-box;
