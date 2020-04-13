@@ -2,6 +2,7 @@
   <div class="nav">
     <nuxt-link to="/" class="brand">My Training Log</nuxt-link>
     <nav>
+      <nuxt-link to="/list">List</nuxt-link> |
       <nuxt-link to="/types">Types</nuxt-link> |
       <nuxt-link to="/create">Create</nuxt-link> |
       <nuxt-link to="/one-rm">1RM</nuxt-link>

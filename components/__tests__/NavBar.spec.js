@@ -24,7 +24,7 @@ describe('NavBar', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('nav should have 3 links', () => {
-    expect(wrapper.findAll('nav a').length).toBe(3)
+  it('nav should have 4 links', () => {
+    expect(wrapper.findAll('nav a').length).toBe(4)
   })
 })
