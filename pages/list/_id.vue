@@ -1,24 +1,34 @@
 <template>
   <div>
-    <h1>A single training: {{ id }}</h1>
+    <h1>{{ training.title }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    id() {
-      return this.$route.params.id
+  async asyncData({ $axios, error, params }) {
+    try {
+      const { data } = await $axios.get(
+        'http://localhost:3000/events/' + params.id
+      )
+      return {
+        training: data
+      }
+    } catch (e) {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch event #' + params.id
+      })
     }
   },
   head() {
     return {
-      title: 'Training #' + this.id,
+      title: this.training.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'What you need to know about training #' + this.id
+          content: 'What you need to know about ' + this.training.title
         }
       ]
     }
