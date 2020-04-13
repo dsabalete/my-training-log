@@ -36,7 +36,6 @@
 import ResultsRM from '~/components/ResultsRM.vue'
 
 export default {
-  name: 'OneRm',
   components: {
     ResultsRM
   },
