@@ -48,13 +48,11 @@ body {
 @media screen and (min-width: 600px) {
   #app {
     width: 550px;
-    background-color: pink;
   }
 }
 @media screen and (min-width: 992px) {
   #app {
     width: 900px;
-    background-color: limegreen;
   }
 }
 hr {

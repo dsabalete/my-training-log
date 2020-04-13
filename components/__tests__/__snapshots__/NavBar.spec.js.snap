@@ -2,7 +2,7 @@
 
 exports[`NavBar renders properly 1`] = `
 "<div class=\\"nav\\"><a class=\\"brand\\">My Training Log</a>
-  <nav><a>List</a> |
+  <nav><a>Types</a> |
     <a>Create</a> |
     <a>1RM</a></nav>
 </div>"
