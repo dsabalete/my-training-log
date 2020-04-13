@@ -19,6 +19,11 @@ export default {
         { name: 'Push-Pull-Leg', path: 'pushpullleg' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Main page'
+    }
   }
 }
 </script>

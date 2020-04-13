@@ -10,6 +10,19 @@ import NavBar from '~/components/NavBar.vue'
 export default {
   components: {
     NavBar
+  },
+  head() {
+    return {
+      titleTemplate: '%s - My Training Log',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Where you can track your routine data and follow your custom program exercise'
+        }
+      ]
+    }
   }
 }
 </script>

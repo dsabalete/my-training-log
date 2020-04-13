@@ -71,6 +71,19 @@ export default {
         localStorage.setItem('defaultState', settings)
       }
     }
+  },
+  head() {
+    return {
+      title: '1RM Calculator',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'You can calculate your 1RM based on the weight and number of reps'
+        }
+      ]
+    }
   }
 }
 </script>
